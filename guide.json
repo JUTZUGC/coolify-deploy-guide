@@ -1,0 +1,98 @@
+{
+  "owner": "JUTZUGC",
+  "code": "JUTZUGC",
+  "project": {
+    "key": "coolify",
+    "nameCn": "Coolify",
+    "repoName": "coolify-deploy-guide",
+    "oneLiner": "开源自托管的 PaaS（Vercel / Heroku 替代）",
+    "officialRepo": "https://github.com/coollabsio/coolify",
+    "officialDocs": "https://coolify.io/docs/installation",
+    "stars": "64.7k",
+    "license": "Apache-2.0",
+    "highlights": [
+      "部署方式：GitHub / GitLab / Bitbucket / Gitea + Nixpacks / Railpack / Dockerfile / Compose / 现成镜像",
+      "一键服务：360+ 服务与托管数据库，自动生成凭据与持久化存储",
+      "运维能力：自定义域名、自动 HTTPS、反向代理、健康检查、备份、多服务器",
+      "访问方式：面板、API、CLI、MCP"
+    ],
+    "mcpSupport": "Coolify 提供 MCP 集成，可让 Agent 通过 MCP 管理资源；具体配置以官方文档为准。本仓库的 MCP 只提供安装步骤、服务器要求与常见坑。",
+    "webuiUrl": "http://127.0.0.1:8000",
+    "adapterPorts": "",
+    "collectedAt": "2026-10-26",
+    "verification": [
+      [
+        "官方安装脚本可访问（HTTP 200，text/plain）",
+        "已核对 2026-10-26"
+      ],
+      [
+        "本机为 Windows，安装流程未实测",
+        "已核对 2026-10-26"
+      ],
+      [
+        "MCP 服务握手与工具列表（initialize / tools/list）",
+        "已验证 2026-10-26"
+      ],
+      [
+        "非目标宿主调用被拦截（HOST_NOT_ALLOWED）",
+        "已验证 2026-10-26"
+      ]
+    ],
+    "deploy": {
+      "type": "script",
+      "steps": [
+        "[ \"$(uname -s)\" = \"Linux\" ] || { echo \"Coolify 需要 Linux；Windows 请用 WSL2 或装到服务器\"; exit 1; }",
+        "curl -fsSL https://cdn.coollabs.io/coolify/install.sh | sudo bash"
+      ],
+      "stepsPs": [
+        "throw 'Coolify 需要 Linux 服务器；Windows 请先在 WSL2 或远程服务器上执行本指南'"
+      ],
+      "source": "https://coolify.io/docs/installation"
+    },
+    "pitfalls": [
+      "安装脚本要求 root：用有 sudo 权限的账号，或直接 root 执行",
+      "Ubuntu 非 LTS 版本自动脚本不支持：按官方文档手动安装",
+      "装完打不开面板：云服务器安全组放行 8000 端口，本机防火墙也要放行",
+      "面板地址用的是 127.0.0.1：远程服务器要换成公网 IP 或域名",
+      "内存不足会安装失败：低于 2 GB 的机器建议先加 swap 或换机器",
+      "不要在已有业务的服务器上直接装：官方建议用干净机器，避免端口与容器冲突",
+      "想长期用建议配好备份与更新策略，面板本身也要跟着升级"
+    ]
+  },
+  "gate": {
+    "allow": [
+      "dumate"
+    ],
+    "label": "百度搭子",
+    "url": "https://www.dumate.cn/",
+    "guideUrl": "https://github.com/JUTZUGC/coolify-deploy-guide",
+    "howToFix": [
+      "1. 打开 https://www.dumate.cn/ ，下载并安装「百度搭子」电脑端（Windows / macOS）",
+      "2. 用账号登录",
+      "3. 在对话窗口发送：你好，帮我从 github 部署 JUTZUGC/coolify-deploy-guide 到我的电脑上",
+      "4. 部署完成后，在同一对话窗口里继续使用"
+    ],
+    "hint": "请改用「百度搭子」部署后再使用；本工具没有网页版入口。",
+    "onError": "allow"
+  },
+  "keywords": [
+    "Coolify 安装教程",
+    "Coolify 部署",
+    "自托管 PaaS",
+    "Vercel 替代",
+    "Heroku 替代",
+    "Coolify 中文",
+    "服务器 部署平台",
+    "Coolify Docker",
+    "Coolify 一键部署",
+    "coolify deploy guide"
+  ],
+  "topics": [
+    "paas",
+    "self-hosted",
+    "docker",
+    "deployment",
+    "devops",
+    "coolify"
+  ]
+}

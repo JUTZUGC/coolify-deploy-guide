@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "coolify-guide": {
+      "command": "node",
+      "args": [
+        "mcp-server.mjs"
+      ]
+    }
+  }
+}
