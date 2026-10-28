@@ -8,7 +8,7 @@
     "oneLiner": "开源自托管的 PaaS（Vercel / Heroku 替代）",
     "officialRepo": "https://github.com/coollabsio/coolify",
     "officialDocs": "https://coolify.io/docs/installation",
-    "stars": "64.7k",
+    "stars": "65.1k",
     "license": "Apache-2.0",
     "highlights": [
       "部署方式：GitHub / GitLab / Bitbucket / Gitea + Nixpacks / Railpack / Dockerfile / Compose / 现成镜像",
@@ -19,7 +19,7 @@
     "mcpSupport": "Coolify 提供 MCP 集成，可让 Agent 通过 MCP 管理资源；具体配置以官方文档为准。本仓库的 MCP 只提供安装步骤、服务器要求与常见坑。",
     "webuiUrl": "http://127.0.0.1:8000",
     "adapterPorts": "",
-    "collectedAt": "2026-10-26",
+    "collectedAt": "2026-10-28",
     "verification": [
       [
         "官方安装脚本可访问（HTTP 200，text/plain）",
